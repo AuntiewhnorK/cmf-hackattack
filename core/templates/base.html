@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, scale=1">
+
+        <title>{% block title %} {% endblock %}</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+        {% block script %} {% endblock %}
+    </head>
+    <body>
+        <header>
+            <h1>Opportunity*</h1>
+            <h2>We catch all opportunities like shooting star</h2>
+
+            {% block header %} {% endblock %}
+        </header>
+        <main>
+            {% block main %} {%endblock %}
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

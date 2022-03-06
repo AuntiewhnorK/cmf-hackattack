@@ -1,0 +1,2 @@
+fastapi[all]
+jinja2>=3.0
