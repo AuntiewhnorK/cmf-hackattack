@@ -17,11 +17,302 @@
 }
 
 body {
-    margin: 2rem;
     color: green;
+    font-size: 1rem;
+    color: var(--dark-blue-opportunity);
+    background-color: var(--dark-blue-opportunity);
+    font-family: futura-pt, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+a {
+    color: var(--dark-blue-opportunity);
+    text-decoration: none;
+}
+
+header {
+    padding: 1.5rem 1rem;
+    background-color: var(--dark-blue-opportunity);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .to-homepage {
+    margin-left: 2rem;
+    flex-direction: column;
+    color: var(--light-beige-opportunity);
+}
+
+a .logo {
+    color: var(--light-beige-opportunity);
+    font-size: 3rem;
+    font-family: gastromond,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a .subtitle {
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
+    font-family: gastromond,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav.flex {
+    padding: 1rem;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 1rem;
+    height: fit-content;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.button, .nav-item {
+    color: var(--dark-blue-opportunity);
+    background-color: var(--yellow-opportunity);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.button.with-icon {
+    flex-direction: row;
+}
+
+.button.with-icon img.icon {
+    margin-left: 0.75rem;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+label.sr-only {
+    position: absolute;
+    transform: translate(-10000%, -10000%);
+}
+
+form label.invisible {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+form .form-field.position-relative input {
+    width: 100%;
+    font-family: futura-pt, sans-serif;
     font-size: 1rem;
 }
 
-.button {
+form .form-field.position-relative .icon-button {
+    position: absolute;
+    border: none;
+    outline: none;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
+form#search-for-opportunity {
+    margin-left: 2rem;
+    padding: 1rem 0;
+}
+
+form#search-for-opportunity .form-field input {
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 25rem;
+    background-color: var(--light-beige-opportunity);
+    font-family: futura-pt, sans-serif;
+}
+
+form#search-for-opportunity .form-field button {
+    background-color: var(--light-beige-opportunity);
+    right: 1.5rem;
+}
+
+#location-checkbox-group, #identity-checkbox-group, #type-checkbox-group {
+    display: none;
+}
+
+#location-checkbox-group.show, #identity-checkbox-group.show, #type-checkbox-group.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-filter-group {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-blue-secondary-opportunity);
+    justify-content: space-between;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.filter-group .filter img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    height: 1rem;
+}
+
+.form-field.filter {
+    margin-left: 1rem;
+}
+
+.form-field.filter select {
+    background-color: var(--gray-opportunity);
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem 1rem 1.5rem;
+    font-family: futura-pt, sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 6rem;
+}
+
+.filter-group .filter .select-box {
+    z-index: 20;
+}
+
+
+.filter-group .filter .select-wrapper label {
+    font-size: 1.25rem;
+}
+
+.filter-group .filter .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-beige-opportunity);
+    right: 0;
+    left: 0;
+    padding: 3rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+    z-index: 10;
+    transform: translateY(-25%);
+}
+
+main {
+    background-color: var(--dark-blue-opportunity);
+    min-height: 100vh;
+}
+
+footer {
+    background-color: var(--dark-blue-secondary-opportunity);
+    color: var(--light-beige-opportunity);
+    font-size: 2rem;
+    text-align: center;
+    padding: 6rem;
+}
+
+section#opportunity-list {
+    padding: 4rem 2rem;
+}
+
+section#opportunity-list.grid.four-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+section#opportunity-list .item-card {
+    background-color: var(--light-beige-opportunity);
+    border-radius: 1rem;
+}
+
+section#opportunity-list .item-card .opportunity-img {
+    height: 10rem;
+    background-color: var(--yellow-opportunity);
+    border-radius: 1rem;
+}
+
+section#opportunity-list .item-card .opportunity-title {
+    margin-bottom: 1.25rem;
+    margin-top: 1.5rem
+}
+
+section#opportunity-list .item-card .short-info {
+    padding: 1rem;
+}
+
+main .about-card {
+    background-color: var(--yellow-opportunity);
+    border-radius: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: 4rem 2rem 2rem 2rem;
+}
+
+main .about-card.grid.two-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 8rem;
+}
+
+main .about-card .principle-item {
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+main .about-card .principle-item .uppercase {
+    text-transform: uppercase;
+}
+
+main .about-card .principle-item ul li {
+    list-style: none;
+}
+
+section#about-us .about-title {
+    display: flex;
+    flex-direction: column;
+}
+
+section#about-us .about-title h1 {
+    font-weight: 600;
+    font-family: gastromond,sans-serif;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+section#about-us .about-title rt {
+    font-style: italic;
+    text-align: center;
+    font-size: 2rem;
+}
+
+section#about-us .about-text {
+    margin-top: 4rem;
+}
+
+section#about-us .about-text p.margin-top {
+    margin-top: 2rem;
 }
