@@ -1,7 +1,207 @@
-{% extends "base.html" %}
+<script src="../../../../School/IAT 339/Code tutorials/js_tut/js/dropdown.js"></script>{% extends "base.html" %}
 
 {% block title %} Opportunity Star Home Page {% endblock %}
 
+{% block script %}
+    <script src="{{ url_for('static', path='js/showCheckboxes.js') }}" defer></script>
+{% endblock %}
+
 {% block main %}
-    <p>list of event?</p>
+    <div class="search-filter-group">
+        <form id="search-for-opportunity" method="get" class="search-bar">
+            <div class="form-field position-relative">
+                <label for="search" class="sr-only">Search</label>
+                <input id="search" type="search" placeholder="Location, Type of Opportunity, etc." name="search-opportunity">
+                <button type="submit" form="search-for-opportunity" class="icon-button">
+                    <img src="{{ url_for('static', path='img/search.svg') }}"
+                         alt="Search for opportunity"
+                         width="24" height="24"
+                         class="icon"
+                    >
+                </button>
+            </div>
+        </form>
+
+        <div class="filter-group">
+            <div class="form-field filter location multi-select position-relative">
+                <div id="location-select-box" class="position-relative select-box">
+                    <label for="location-dropdown" class="sr-only">Location</label>
+                    <select id='location-dropdown'>
+                        <option value='' selected hidden>Location</option>
+                    </select>
+                    <img src="{{ url_for('static', path='img/expand_more.svg') }}"
+                         alt="Search for opportunity"
+                         width="24" height="24"
+                         class="icon"
+                    >
+                </div>
+                <div id="location-checkbox-group" class="position-absolute checkbox-group">
+                    <label for="vancouver-bc">
+                        <input type="checkbox" id="vancouver-bc" name='location' value="Vancouver, BC">
+                        Vancouver, BC
+                    </label>
+                    <label for="charlotte-nc">
+                        <input type="checkbox" id="charlotte-nc" name='location' value="Charlotte, NC">
+                        Charlotte, NC
+                    </label>
+                    <label for="troy-ny">
+                        <input type="checkbox" id="troy-ny" name='location' value="Troy, NY">
+                        Troy, NY
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-field filter identity multi-select position-relative">
+                <div id="identity-select-box" class="position-relative select-box">
+                    <label for="identity-dropdown" class="sr-only">Location</label>
+                    <select id='identity-dropdown'>
+                        <option value='' selected hidden>Identity</option>
+                    </select>
+                    <img src="{{ url_for('static', path='img/expand_more.svg') }}"
+                         alt="Search for opportunity"
+                         width="24" height="24"
+                         class="icon"
+                    >
+                </div>
+                <div id="identity-checkbox-group" class="position-absolute checkbox-group">
+                    <label for="bipoc">
+                        <input type="checkbox" id="bipoc" name='identity' value="BIPOC">
+                        BIPOC
+                    </label>
+                    <label for="disability">
+                        <input type="checkbox" id="disability" name='identity' value="Disability">
+                        Disability
+                    </label>
+                    <label for="lgbt">
+                        <input type="checkbox" id="lgbt" name='identity' value="LGBT">
+                        LGBT
+                    </label>
+                    <label for="women">
+                        <input type="checkbox" id="women" name='identity' value="Women">
+                        Women
+                    </label>
+                    <label for="Neurodiversity">
+                        <input type="checkbox" id="neurodiversity" name='identity' value="Neurodiversity">
+                        Neurodiversity
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-field filter opportunity-type multi-select position-relative">
+                <div id="type-select-box" class="position-relative select-box">
+                    <label for="type-dropdown" class="sr-only">Type</label>
+                    <select id='type-dropdown'>
+                        <option value='' selected hidden>Type</option>
+                    </select>
+                    <img src="{{ url_for('static', path='img/expand_more.svg') }}"
+                         alt="Search for opportunity"
+                         width="24" height="24"
+                         class="icon"
+                    >
+                </div>
+                <div id="type-checkbox-group" class="position-absolute checkbox-group">
+                    <label for="organization">
+                        <input type="checkbox" id="organization" name='opportunity-type' value="Organization">
+                        Organization
+                    </label>
+                    <label for="event">
+                        <input type="checkbox" id="event" name='opportunity-type' value="Event">
+                        Event
+                    </label>
+                    <label for="job">
+                        <input type="checkbox" id="job" name='opportunity-type' value="Job">
+                        Job
+                    </label>
+                    <label for="networking">
+                        <input type="checkbox" id="networking" name='opportunity-type' value="Networking">
+                        Organization
+                    </label>
+                    <label for="hangout">
+                        <input type="checkbox" id="hangout" name='opportunity-type' value="Hangout">
+                        Organization
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="opportunity-list" class="grid four-columns">
+        <div class="opportunity-item item-card">
+            <div class="opportunity-img"></div>
+            <div class="short-info">
+                <div class="opportunity-title">
+                    <h3>cmd+f Hackathon 2022</h3>
+                    <p class="italic">Virtual event</p>
+                </div>
+                <p>
+                    cmd-f 2022 is the fourth iteration of British Columbia's first and largest 24-hour all-women* hackathon, taking place virtually from Sat March 5th to 6th
+                </p>
+            </div>
+        </div>
+
+        <div class="opportunity-item item-card">
+            <div class="opportunity-img"></div>
+            <div class="short-info">
+                <div class="opportunity-title">
+                    <h3>cmd+f Hackathon 2022</h3>
+                    <p class="italic">Virtual event</p>
+                </div>
+                <p>
+                    cmd-f 2022 is the fourth iteration of British Columbia's first and largest 24-hour all-women* hackathon, taking place virtually from Sat March 5th to 6th
+                </p>
+            </div>
+        </div>
+
+        <div class="opportunity-item item-card">
+            <div class="opportunity-img"></div>
+            <div class="short-info">
+                <div class="opportunity-title">
+                    <h3>cmd+f Hackathon 2022</h3>
+                    <p class="italic">Virtual event</p>
+                </div>
+                <p>
+                    cmd-f 2022 is the fourth iteration of British Columbia's first and largest 24-hour all-women* hackathon, taking place virtually from Sat March 5th to 6th
+                </p>
+            </div>
+        </div>
+
+        <div class="opportunity-item item-card">
+            <div class="opportunity-img"></div>
+            <div class="short-info">
+                <div class="opportunity-title">
+                    <h3>cmd+f Hackathon 2022</h3>
+                    <p class="italic">Virtual event</p>
+                </div>
+                <p>
+                    cmd-f 2022 is the fourth iteration of British Columbia's first and largest 24-hour all-women* hackathon, taking place virtually from Sat March 5th to 6th
+                </p>
+            </div>
+        </div>
+
+        <div class="opportunity-item item-card">
+            <div class="opportunity-img"></div>
+            <div class="short-info">
+                <div class="opportunity-title">
+                    <h3>cmd+f Hackathon 2022</h3>
+                    <p class="italic">Virtual event</p>
+                </div>
+                <p>
+                    cmd-f 2022 is the fourth iteration of British Columbia's first and largest 24-hour all-women* hackathon, taking place virtually from Sat March 5th to 6th
+                </p>
+            </div>
+        </div>
+
+        <div class="opportunity-item item-card">
+            <div class="opportunity-img"></div>
+            <div class="short-info">
+                <div class="opportunity-title">
+                    <h3>cmd+f Hackathon 2022</h3>
+                    <p class="italic">Virtual event</p>
+                </div>
+                <p>
+                    cmd-f 2022 is the fourth iteration of British Columbia's first and largest 24-hour all-women* hackathon, taking place virtually from Sat March 5th to 6th
+                </p>
+            </div>
+        </div>
+    </section>
 {% endblock %}

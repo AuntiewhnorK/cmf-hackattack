@@ -7,21 +7,33 @@
         <title>{% block title %} {% endblock %}</title>
 
         <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+        <link rel="stylesheet" href="https://use.typekit.net/dce5gjc.css">
         {% block script %} {% endblock %}
     </head>
     <body>
         <header>
-            <h1><a href="./" class="button">Opportunities*</a></h1>
-            <h2>We catch all opportunities like shooting star</h2>
+            <a href="./" class="flex to-homepage">
+                <h1 class="logo">Opportunities*</h1>
+                <h2 class="subtitle">We catch all opportunities like shooting star</h2>
+            </a>
 
-            <a href="./about" class="button">About</a>
-            <a href="./add_event" class="button">Add Events</a>
+            <nav class="flex">
+                <a href="./about" class="button nav-item">About</a>
+                <a href="./add_event" class="button with-icon nav-item">
+                    <p>Add Opportunity</p>
+                    <img src="{{ url_for('static', path='img/add.svg') }}"
+                         alt="Add Opportunity"
+                         width="24" height="24"
+                         class="icon"
+                    >
+                </a>
+            </nav>
         </header>
         <main>
             {% block main %} {%endblock %}
         </main>
         <footer>
-
+            <p>&copy; Born in cmd+f Hackathon 2022, with a fight for #SocialForGood, and love!</p>
         </footer>
     </body>
 </html>
