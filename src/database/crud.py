@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from . import models, schemas
+from src.database import models, schemas
 
 
 def get_admin(db: Session, admin_id: int):

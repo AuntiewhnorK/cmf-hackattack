@@ -1,2 +1,3 @@
 fastapi[all]
 jinja2>=3.0
+sqlalchemy>=1.4

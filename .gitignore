@@ -12,5 +12,6 @@ env.bak/
 venv.bak/
 
 *.sqlite3
+*.db
 *.log
 *.pot
