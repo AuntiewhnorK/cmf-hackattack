@@ -1,0 +1,27 @@
+:root {
+    --dark-blue-opportunity: #032736;
+    --yellow-opportunity: #F9C84C;
+    --brown-opportunity: #8D6423;
+    --light-beige-opportunity: #F2EFDF;
+
+    --dark-blue-secondary-opportunity: #39535D;
+    --lighter-blue-opportunity: #4281A4;
+    --white-opportunity: #FAFAFA;
+    --gray-opportunity: #C4C4C4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    margin: 2rem;
+    color: green;
+    font-size: 1rem;
+}
+
+.button {
+
+}

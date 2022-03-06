@@ -1,0 +1,17 @@
+.DS_Store
+.idea
+.git
+__pycache__/
+
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+*.sqlite3
+*.db
+*.log
+*.pot
