@@ -33,3 +33,11 @@ class Event(Base):
     #owner_id = Column(Integer, ForeignKey("admin.id"))
 
     organizer = relationship("Admin", back_populates="events")
+
+class College(Base):
+    __tablename__ = "colleges"
+
+    id = Column(Integer, primary_key=True, index=True)
+    college_name = Column(String, index=True)
+    state = Column(String, index=True)
+    address = Column(String, index=True)
