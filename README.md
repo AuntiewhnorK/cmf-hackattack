@@ -17,8 +17,12 @@ The star after opportunity is inspired by the inclusive identity marker of “wo
 
 Systemically, those with minority identities (in gender, sexuality, race, ethnicity, culture, disability, neurodiversity, and more) have lower access to opportunities, spaces, and communities. We want to change that. We believe in a future in which every star can shine brightly and be connected to a constellation of opportunities that are built for them.
 
-# How to Run
-1. Fulfill requirements from text file (download with pip)
+## How to Run
+1. Have [Python](https://www.python.org/downloads/), and make sure it is on Environment PATH ([For Windows](https://datatofish.com/add-python-to-windows-path/), [For Mac](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac))
 2. Clone repo into folder
-3. Navigate to folder holding `src` and files inside terminal (Ex: `C:\Users\username\..\folder>`
-4. Copy paste `python -m uvicorn src.main:app` into terminal and run.
+3. Fulfill requirements from text file using `pip install -r requirements.txt`
+5. Navigate to folder holding `src` and files inside terminal (Ex: `C:\Users\username\..\folder>`
+6. Copy paste `python -m uvicorn src.main:app` into terminal and run.
+
+## Project Status
+This project has been submitted for the CMF 2022 Hackathon. Outside of this, I (Auntiewhnor) plan to try and complete the About page and connect the `university.csv` to the database.
